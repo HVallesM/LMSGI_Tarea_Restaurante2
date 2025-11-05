@@ -123,8 +123,30 @@
 				<dd>Se recomienda reservar sala con al menos dos semanas de antelación.</dd>
 			</dl>
 		</aside>
-
+		<button id="abrirB">Reservar sala</button>
+		<dialog id="reservaSala">
+			<h3>Solicitud de reserva</h3>
+    			<ul>
+      				<li>Máximo 20 personas por sala.</li>
+     				<li>Las reservas se aceptan con un mínimo de 3 días de antelación.</li>
+      				<li>Indique alergias o restricciones alimentarias al hacer la reserva.</li>
+    			</ul>
+    	<button id="cerrarB">Cerrar</button>
+ 		</dialog>
 	</main>
+	<script>
+  		const botonAbrir = document.getElementById('abrirB');
+  		const botonCerrar = document.getElementById('cerrarB');
+ 		const dialogo = document.getElementById('reservaSala');
+
+  botonAbrir.addEventListener('click', () => {
+    dialogo.showModal(); 
+  });
+
+  botonCerrar.addEventListener('click', () => {
+    dialogo.close();
+  });
+</script>
 </body>
 <footer>
   
